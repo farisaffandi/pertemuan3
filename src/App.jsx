@@ -1,42 +1,33 @@
 import "./App.css";
-import React, { Component } from "react";
+import Profile from "./Componets/profile";
+import Footer from "./Componets/Footer";
+import Header from "./Componets/Header";
+import Todolist from "./Componets/TodoList";
+import Castemer from "./Componets/Customer";
 
 function App() {
   return (
     <>
       <Header />
-      <h1>To-do List :</h1>
-      <ol>
-        <li>Mengerjakan Tugas Front End</li>
-        <li>Mempelajari Tutorial react js</li>
-        <li>Murojaah Juz 1</li>
-      </ol>
+      <Todolist />
+      <Profile nama="Faris Affand" alamat="Bandung" umur={20} />
+      <img
+        src="https://picsum.photos/id/127/200/300"
+        alt="gambar-pemandangan"
+        width={100}
+        height={100}
+      />
+      <Castemer />
+
       <Footer />
     </>
   );
 }
 
-function Header() {
-  return (
-    <nav>
-      <ul>
-        <li>Home</li>
-        <li>About</li>
-        <li>Login</li>
-      </ul>
-    </nav>
-  );
-}
 
-class Footer extends Component {
-  render() {
-    return (
-      <footer>
-        <h3>Copyright &copy;2024 Developed by Faris Affandi</h3>
-        <span>Make With &#10084; </span>
-      </footer>
-    );
-  }
-}
+
+
+
+
 
 export default App;
